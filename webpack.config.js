@@ -21,21 +21,19 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-
-        test: /\.html$/,
-        use: {
-          loader: 'html-loader',
-          options: {
-            // You can enable options here
-            minimize: true, // Enable HTML minification for production
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
+        {
+          test: /\.html$/,
+          use: {
+            loader: "html-loader",
+            options: {
+              minimize: true,
+            },
           },
         },
-      },
-      
-      
     ],
   },
 };

@@ -1,5 +1,8 @@
 import { getTodoArray, clearStorage, addTodo, saveTodoArray } from "./localStorage";
 import { format } from "date-fns";
+import './todo.css';
+import './template.css';
+
 const { isBefore, endOfToday, startOfDay, add } = require("date-fns");
 const list = document.querySelector("#todoList");
 let allToggle = true;
@@ -213,6 +216,7 @@ export class Todo {
 
   function updateList(array) {
     console.log("listUpdating");
+    list.classList.add('listChild');
     list.textContent = "";
     array.forEach((todo) => {
       const child = document.createElement('div');
